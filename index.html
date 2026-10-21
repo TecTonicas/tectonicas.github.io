@@ -139,6 +139,17 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1
 .flow li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
 .flow b{width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.2rem}
 .flow p{color:var(--muted);font-size:15px;margin-top:2px}
+.tl-wrap{margin-top:64px}
+.tl{list-style:none;margin:24px 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.1rem;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:4.4rem 1fr;gap:2.2rem;padding:0 0 26px;position:relative}
+.tl li::after{content:"";position:absolute;left:calc(5.1rem - 6px);top:8px;width:14px;height:14px;border-radius:50%;background:var(--panel);border:3px solid var(--gold)}
+.tl .yr{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1;color:var(--gold);text-align:right}
+.tl h3{margin:0 0 4px}
+.tl p{margin:0;color:var(--muted);font-size:15.5px;max-width:62ch}
+.tl li.now::after{background:var(--green);border-color:var(--green)}
+.tl li.now .yr{color:var(--green)}
+.tl li.now h3{color:var(--green)}
 </style>
 </head>
 <body>
@@ -148,7 +159,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1
     <nav aria-label="Seções">
       <a href="#autorizacao" data-i18n="nav1">Autorização</a>
       <a href="#licenciamento" data-i18n="nav2">Licenciamento</a>
-      <a href="#area" data-i18n="nav3">Área</a>
+      <a href="#area" data-i18n="nav3">História</a>
       <a href="#geologia" data-i18n="nav3b">Geologia</a>
       <a href="#operacao" data-i18n="nav4">Operação</a>
       <a href="#social" data-i18n="nav4b">Emprego e renda</a>
@@ -258,6 +269,23 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1
         <dt data-i18n="d6">Licença</dt><dd data-i18n="d6v">LO SEMAS/PA nº 16496/2026, até 15/10/2030</dd>
       </dl>
       <p style="margin:0;color:var(--muted)" data-i18n="aP2">O empreendimento ocupa a área histórica de Serra Pelada, com acesso viário e infraestrutura de apoio já delimitados na licença. A operação aproveita material já movimentado no passado, o que reduz a necessidade de novas frentes de lavra e combina produção com recuperação da área.</p>
+    </div>
+    <div class="tl-wrap">
+      <span class="kicker" data-i18n="tlK">Linha do tempo</span>
+      <h2 data-i18n="tlH">A história de Serra Pelada</h2>
+      <ol class="tl">
+        <li><span class="yr">1980</span><div><h3 data-i18n="t1h">Descoberta e corrida do ouro</h3><p data-i18n="t1p">Em janeiro, o ouro achado na Fazenda Três Barras desencadeia uma corrida. Em poucas semanas, mais de 20 mil pessoas chegam ao local.</p></div></li>
+        <li><span class="yr">1980</span><div><h3 data-i18n="t2h">Intervenção federal</h3><p data-i18n="t2p">Em maio, o governo federal intervém para organizar o garimpo, dividido em milhares de barrancos explorados à mão.</p></div></li>
+        <li><span class="yr">1983</span><div><h3 data-i18n="t3h">O auge</h3><p data-i18n="t3p">Ano de maior produção: cerca de 14 toneladas de ouro registradas oficialmente. A cava se torna um dos maiores garimpos a céu aberto do mundo.</p></div></li>
+        <li><span class="yr">1984</span><div><h3 data-i18n="t4h">Lei nº 7.194</h3><p data-i18n="t4p">A lei reserva cerca de 100 hectares à garimpagem e prevê que os trabalhos sejam administrados por uma cooperativa dos garimpeiros.</p></div></li>
+        <li><span class="yr">1985</span><div><h3 data-i18n="t5h">A Coomigasp assume</h3><p data-i18n="t5p">Com a saída dos órgãos federais, a Cooperativa de Mineração dos Garimpeiros de Serra Pelada passa a administrar o garimpo.</p></div></li>
+        <li><span class="yr">1990</span><div><h3 data-i18n="t6h">Limites do trabalho manual</h3><p data-i18n="t6p">Com a cava a quase 200 metros de profundidade, a produção cai para poucas centenas de quilos por ano. O governo exige um projeto técnico para continuar.</p></div></li>
+        <li><span class="yr">1992</span><div><h3 data-i18n="t7h">Fim do garimpo manual</h3><p data-i18n="t7p">O garimpo é encerrado e a cava se enche de água, formando o lago que existe hoje. Grandes volumes de rejeito permanecem na área.</p></div></li>
+        <li><span class="yr">2007</span><div><h3 data-i18n="t8h">Tentativa de mecanização</h3><p data-i18n="t8p">A Coomigasp se associa a uma mineradora estrangeira e cria a SPCDM para explorar o depósito com mineração subterrânea.</p></div></li>
+        <li><span class="yr">2014</span><div><h3 data-i18n="t9h">Projeto paralisado</h3><p data-i18n="t9p">A insolvência da sócia estrangeira paralisa o projeto e deixa débitos e bloqueios que travam Serra Pelada por anos.</p></div></li>
+        <li class="now"><span class="yr">2026</span><div><h3 data-i18n="t10h">Um novo capítulo</h3><p data-i18n="t10p">A Tectônicas é anotada pela ANM como operadora (maio) e obtém a Licença de Operação da SEMAS/PA (outubro).</p></div></li>
+      </ol>
+      <p class="src" data-i18n="tlSrc">Fontes: IBRAM; Lei nº 7.194/1984 e Decreto nº 99.385/1990 (Planalto); ANM; SEMAS/PA.</p>
     </div>
   </div>
 </section>
@@ -370,7 +398,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1
 <script>
 (function(){
   const EN = {
-    nav1:'Authorization', nav2:'Licensing', nav3:'Site', nav4:'Operations', nav5:'Contact',
+    nav1:'Authorization', nav2:'Licensing', nav3:'History', nav4:'Operations', nav5:'Contact',
     heroEy:'Serra Pelada · Curionópolis, Pará, Brazil', heroH:'A new chapter for Serra Pelada',
     heroP:'Tectônicas Mineração is the company authorized by Brazil’s National Mining Agency (ANM) to operate the Serra Pelada mining titles, and it holds the Operating License from the Pará State Environmental Agency (SEMAS) for gold recovery from the site’s tailings and waste rock.',
     cta1:'Contact the company', cta2:'See completed milestones',
@@ -406,6 +434,17 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1
     nav4b:'Jobs & income', jK:'Jobs, income and social commitment', jH:'Wealth that stays in Serra Pelada', jP:'Social commitment is a permanent part of the Tectônicas project. Operations were designed to create jobs and income in the community itself and to bring initiatives against hunger and poverty to Serra Pelada.',
     j1t:'Fighting hunger', j1n:'Free community restaurant', j1p:'A restaurant in Serra Pelada serving free meals to the population, to tackle hunger and food insecurity in the village.', j2t:'Local jobs', j2n:'Jobs for the community', j2p:'Priority hiring of Serra Pelada residents and miners’ families across all areas of the operation.', j3t:'Skills', j3n:'Vocational training', j3p:'Courses and training to prepare the community for modern mining roles and other professions.', j4t:'Income', j4n:'Local suppliers', j4p:'Purchasing goods and services from small local businesses, so that the income generated circulates in the Serra Pelada economy.', j5t:'Dignity', j5n:'Social projects', j5p:'Support for initiatives against poverty and for health, education and community life, built together with residents.',
     rdK:'Direct payments', rdH:'From the project to each member, with no middlemen', rdP:'Amounts due to the miners will be paid directly to each cooperative member, with no intermediaries. Each member is paid into their own account, with an individual receipt and clear information on where the money comes from.', rd1h:'Verified registry', rd1p:'Individual registration of each eligible member, checked with Coomigasp.', rd2h:'Payment to the member’s account', rd2p:'Bank transfer or PIX in the miner’s own name, without going through third parties.', rd3h:'Receipts and reporting', rd3p:'An individual receipt for each payment and regular reports to the cooperative.',
+    tlK:'Timeline', tlH:'The story of Serra Pelada', tlSrc:'Sources: IBRAM; Law no. 7,194/1984 and Decree no. 99,385/1990 (Brazilian Presidency); ANM; SEMAS/PA.',
+    t1h:'Discovery and gold rush', t1p:'In January, gold found on the Três Barras farm sets off a rush. Within weeks, more than 20,000 people arrive.',
+    t2h:'Federal intervention', t2p:'In May, the federal government steps in to organize the site, divided into thousands of hand-worked claims.',
+    t3h:'The peak', t3p:'Peak production year: about 14 tonnes of gold officially recorded. The pit becomes one of the world’s largest open-air gold rushes.',
+    t4h:'Law no. 7,194', t4p:'The law sets aside about 100 hectares for artisanal mining and provides for the work to be run by a miners’ cooperative.',
+    t5h:'Coomigasp takes over', t5p:'As federal agencies withdraw, the Serra Pelada Miners’ Cooperative takes over management of the site.',
+    t6h:'Limits of manual mining', t6p:'With the pit nearly 200 metres deep, output falls to a few hundred kilograms a year. The government requires a technical plan to continue.',
+    t7h:'End of manual mining', t7p:'The site is closed and the pit fills with water, forming today’s lake. Large volumes of tailings remain on site.',
+    t8h:'Attempt at mechanization', t8p:'Coomigasp partners with a foreign miner and creates SPCDM to develop the deposit underground.',
+    t9h:'Project stalled', t9p:'The foreign partner’s insolvency halts the project, leaving debts and liens that block Serra Pelada for years.',
+    t10h:'A new chapter', t10p:'Tectônicas is registered by ANM as operator (May) and obtains the SEMAS/PA Operating License (October).',
     vCta:'Contact us', cred:'Cover image is illustrative, a conceptual rendering of the project.', disc:'Corporate information only. This is not a public offering of securities.'
   };
   const nodes = [...document.querySelectorAll('[data-i18n]')];
