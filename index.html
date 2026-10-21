@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <style>
-/* Layout: navegação fixa; hero escuro sobre o satélite da área licenciada; narrativa em blocos (autorização → licenciamento → área → operação → compromisso → investidores) */
+/* Layout: navegação fixa; hero escuro sobre o satélite da área licenciada; narrativa em blocos (autorização → licenciamento → área → operação → compromisso → contato) */
 :root{
   --navy:#0b3f8c; --navy-deep:#061f45; --gold:#c08a22; --gold-soft:#f4ead6; --green:#3d7a24;
   --bg:#f7f6f2; --panel:#ffffff; --fg:#14181f; --muted:#5b6170; --line:#e1ddd3;
@@ -108,7 +108,7 @@ dl.spec dd{margin:0;font-weight:500}
 .infra li{display:flex;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-weight:500}
 .infra li i{font-style:normal;font-family:var(--display);font-weight:700;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex:none}
 
-/* investors */
+/* contact */
 .inv{background:var(--navy-deep);color:#fff}
 .inv h2{color:#fff}
 .inv .intro{color:#c9d3e6}
@@ -144,7 +144,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
       <a href="#area" data-i18n="nav3">Área</a>
       <a href="#geologia" data-i18n="nav3b">Geologia</a>
       <a href="#operacao" data-i18n="nav4">Operação</a>
-      <a href="#investidores" data-i18n="nav5">Investidores</a>
+      <a href="#contato" data-i18n="nav5">Contato</a>
     </nav>
     <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="pt" aria-pressed="true">PT</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
   </div>
@@ -155,7 +155,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
     <span class="eyebrow" data-i18n="heroEy">Serra Pelada · Curionópolis, Pará, Brasil</span>
     <h1 data-i18n="heroH">Um novo capítulo para Serra Pelada</h1>
     <p class="lead" data-i18n="heroP">A Tectônicas Mineração é a empresa autorizada pela Agência Nacional de Mineração a operar os títulos minerários de Serra Pelada e detém a Licença de Operação da SEMAS/PA para o aproveitamento de ouro nos rejeitos e estéreis da área.</p>
-    <div class="cta"><a class="btn gold" href="#investidores" data-i18n="cta1">Falar com a empresa</a><a class="btn ghost" href="#licenciamento" data-i18n="cta2">Ver etapas cumpridas</a></div>
+    <div class="cta"><a class="btn gold" href="#contato" data-i18n="cta1">Falar com a empresa</a><a class="btn ghost" href="#licenciamento" data-i18n="cta2">Ver etapas cumpridas</a></div>
     <div class="facts">
       <div><b>LO 16496/2026</b><span data-i18n="f1">Licença de Operação SEMAS/PA, válida até 15/10/2030</span></div>
       <div><b data-i18n="f2b">3 títulos ANM</b><span data-i18n="f2">850.424/1990 · 850.425/1990 · 851.087/2014</span></div>
@@ -307,18 +307,18 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
   </div>
 </section>
 
-<section id="investidores" class="inv">
+<section id="contato" class="inv">
   <div class="in">
-    <span class="kicker" data-i18n="vK">Investidores</span>
-    <h2 data-i18n="vH">Projeto licenciado, pronto para escalar</h2>
-    <p class="intro" data-i18n="vP">O material técnico completo está disponível para investidores qualificados, mediante acordo de confidencialidade.</p>
+    <span class="kicker" data-i18n="vK">Contato</span>
+    <h2 data-i18n="vH">Projeto licenciado, pronto para operar</h2>
+    <p class="intro" data-i18n="vP">Para mais informações sobre o projeto ou para falar com a equipe da Tectônicas, entre em contato.</p>
     <div class="cards">
       <div class="card"><div class="n" data-i18n="v1n">Segurança jurídica</div><p data-i18n="v1p">Operadora anotada pela ANM com base em decisão judicial e contrato com os titulares.</p></div>
       <div class="card"><div class="n" data-i18n="v2n">Licença vigente</div><p data-i18n="v2p">Licença de Operação SEMAS/PA válida até outubro de 2030.</p></div>
       <div class="card"><div class="n" data-i18n="v3n">Material já lavrado</div><p data-i18n="v3p">Aproveitamento de rejeitos e estéreis históricos de um dos depósitos de ouro mais conhecidos do Brasil.</p></div>
-      <div class="card"><div class="n" data-i18n="v4n">Data room</div><p data-i18n="v4p">Laudos, licença, volumes, teores e cronograma de produção sob NDA.</p></div>
+      <div class="card"><div class="n" data-i18n="v4n">Documentação</div><p data-i18n="v4p">Licença, laudos e documentos técnicos disponíveis mediante solicitação.</p></div>
     </div>
-    <div class="contact"><a class="btn gold" href="mailto:CONTATO@EMPRESA.COM.BR" data-i18n="vCta">Solicitar apresentação</a><span style="color:#c9d3e6;font-size:15px">CONTATO@EMPRESA.COM.BR</span></div>
+    <div class="contact"><a class="btn gold" href="mailto:CONTATO@EMPRESA.COM.BR" data-i18n="vCta">Fale conosco</a><span style="color:#c9d3e6;font-size:15px">CONTATO@EMPRESA.COM.BR</span></div>
   </div>
 </section>
 </main>
@@ -335,7 +335,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
 <script>
 (function(){
   const EN = {
-    nav1:'Authorization', nav2:'Licensing', nav3:'Site', nav4:'Operations', nav5:'Investors',
+    nav1:'Authorization', nav2:'Licensing', nav3:'Site', nav4:'Operations', nav5:'Contact',
     heroEy:'Serra Pelada · Curionópolis, Pará, Brazil', heroH:'A new chapter for Serra Pelada',
     heroP:'Tectônicas Mineração is the company authorized by Brazil’s National Mining Agency (ANM) to operate the Serra Pelada mining titles, and it holds the Operating License from the Pará State Environmental Agency (SEMAS) for gold recovery from the site’s tailings and waste rock.',
     cta1:'Contact the company', cta2:'See completed milestones',
@@ -358,8 +358,8 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
     oK:'Operations', oH:'Facilities authorized in the license', oP:'The Operating License defines the recovery area and the project’s support facilities.',
     i1:'Gatehouse', i2:'Administrative area', i3:'Leach recovery laboratory', i4:'Laboratory', i5:'Heap leach pads', i6:'Gravity gold concentrate', i7:'Gravity processing', i8:'Processing feed stockpiles',
     eK:'Social and environmental commitment', eH:'Programs required by the license', e1h:'Land reclamation', e1p:'Degraded Area Recovery Plan carried out alongside operations.', e2h:'Water resources', e2p:'Water management, drainage and erosion and sediment control.', e3h:'Stockpile stability', e3p:'Ongoing monitoring of waste and processing stockpiles.', e4h:'Local community', e4p:'Training and hiring of local workers, regional suppliers and community communication in Serra Pelada.',
-    vK:'Investors', vH:'A licensed project, ready to scale', vP:'The full technical package is available to qualified investors under a non-disclosure agreement.',
-    v1n:'Legal certainty', v1p:'Operator registered by ANM, based on a court decision and an agreement with the title holders.', v2n:'License in force', v2p:'SEMAS/PA Operating License valid until October 2030.', v3n:'Material already mined', v3p:'Recovery of historic tailings and waste rock from one of Brazil’s best-known gold deposits.', v4n:'Data room', v4p:'Technical reports, license, volumes, grades and production schedule under NDA.',
+    vK:'Contact', vH:'A licensed project, ready to operate', vP:'For more information about the project or to reach the Tectônicas team, get in touch.',
+    v1n:'Legal certainty', v1p:'Operator registered by ANM, based on a court decision and an agreement with the title holders.', v2n:'License in force', v2p:'SEMAS/PA Operating License valid until October 2030.', v3n:'Material already mined', v3p:'Recovery of historic tailings and waste rock from one of Brazil’s best-known gold deposits.', v4n:'Documentation', v4p:'License, technical reports and documents available on request.',
     zK:'Geology and potential', zH:'Why there is still gold at Serra Pelada', zP:'Serra Pelada is not just a gold deposit. The scientific literature classifies it as a gold-palladium-platinum deposit with exceptional grades. With the manual methods of the 1980s, much of these metals was never recovered and remained in the tailings and waste rock piled on site.',
     zM:'Metals and minerals of the deposit', m1n:'Gold (Au)', m1p:'Palladian gold, with palladium in the alloy itself, high-grade and close to surface.', m2n:'Palladium (Pd)', m2p:'Present in the gold and in discrete palladium minerals.', m3n:'Platinum (Pt)', m3p:'Platinum minerals associated with the gold; published drilling reported high grades at depth.', m4n:'Associated', m4p:'Manganese and barium oxides, goethite, hematite, quartz, kaolinite, sericite, monazite and florencite.',
     zMs:'Enrichment occurs in a goethite-rich breccia along the Cinzento fault, above older mineralization at depth (Cabral, Burgess and Lehmann, Economic Geology, 2011).',
@@ -368,7 +368,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
     cK:'Partnership with the miners', cH:'Side by side with Coomigasp', cP:'Serra Pelada was built by the work of its miners. Coomigasp, the cooperative that represents them, holds the mineral rights and is Tectônicas’ partner in the project’s new phase. Operations were structured so that cooperative members are part of the restart, not spectators.',
     c1n:'Partnership', c1p:'Integrated operation agreement with Coomigasp, which retains ownership of the mineral rights and shares in the project’s results.', c2n:'Commitment', c2p:'Respect for the miners’ history and rights, with priority for workers, suppliers and opportunities from the Serra Pelada community itself.', c3n:'Transparency', c3p:'Regular reporting to the cooperative and its members, with clear information on production, milestones and operating results.',
     sH:'A dream made possible again', sP1:'Tectônicas believed in Serra Pelada when few did. The previous project left debts, liens and a deadlock that, for years, took away the miners’ hope of seeing the project work.', sP2:'Tectônicas took on that risk. It became Coomigasp’s partner, faced the legal and regulatory barriers, and carried the licensing process through to the Operating License.', sP3:'More than restarting a mine, the goal is to restore dignity and prospects to thousands of miners and their families. The Serra Pelada dream is possible again, and now it has someone to make it real.',
-    vCta:'Request a presentation', cred:'Cover image is illustrative, a conceptual rendering of the project.', disc:'Corporate information only. This is not a public offering of securities.'
+    vCta:'Contact us', cred:'Cover image is illustrative, a conceptual rendering of the project.', disc:'Corporate information only. This is not a public offering of securities.'
   };
   const nodes = [...document.querySelectorAll('[data-i18n]')];
   const PT = {}; nodes.forEach((n) => { PT[n.dataset.i18n] = n.textContent; });
