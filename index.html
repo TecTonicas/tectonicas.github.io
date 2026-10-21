@@ -132,6 +132,7 @@ footer img{height:34px;width:auto}
 .story p{margin:0 0 14px;font-size:1.08rem}
 .story p:last-child{margin-bottom:0;font-weight:600}
 h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transform:uppercase;margin:0 0 8px}
+.social .card .n{font-size:1.35rem}
 </style>
 </head>
 <body>
@@ -144,6 +145,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
       <a href="#area" data-i18n="nav3">Área</a>
       <a href="#geologia" data-i18n="nav3b">Geologia</a>
       <a href="#operacao" data-i18n="nav4">Operação</a>
+      <a href="#social" data-i18n="nav4b">Emprego e renda</a>
       <a href="#contato" data-i18n="nav5">Contato</a>
     </nav>
     <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="pt" aria-pressed="true">PT</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
@@ -307,6 +309,21 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
   </div>
 </section>
 
+<section id="social" class="alt">
+  <div class="in">
+    <span class="kicker" data-i18n="jK">Emprego, renda e contrapartida social</span>
+    <h2 data-i18n="jH">Riqueza que fica em Serra Pelada</h2>
+    <p class="intro" data-i18n="jP">A contrapartida social é pauta permanente do projeto da Tectônicas. A operação foi pensada para gerar emprego e renda na própria comunidade e para levar a Serra Pelada iniciativas de combate à fome e à miséria.</p>
+    <div class="cards social">
+      <div class="card"><span class="tag" data-i18n="j1t">Combate à fome</span><div class="n" data-i18n="j1n">Restaurante gratuito</div><p data-i18n="j1p">Restaurante em Serra Pelada com refeições gratuitas para a população, para enfrentar a fome e a insegurança alimentar na vila.</p></div>
+      <div class="card"><span class="tag" data-i18n="j2t">Emprego local</span><div class="n" data-i18n="j2n">Vagas para a comunidade</div><p data-i18n="j2p">Prioridade na contratação de moradores de Serra Pelada e de famílias de garimpeiros nas diversas frentes da operação.</p></div>
+      <div class="card"><span class="tag" data-i18n="j3t">Qualificação</span><div class="n" data-i18n="j3n">Formação profissional</div><p data-i18n="j3p">Cursos e capacitação para preparar a comunidade para as funções da mineração moderna e para outras profissões.</p></div>
+      <div class="card"><span class="tag" data-i18n="j4t">Renda</span><div class="n" data-i18n="j4n">Fornecedores da região</div><p data-i18n="j4p">Compra de bens e serviços de pequenos negócios locais, para que a renda gerada circule na economia de Serra Pelada.</p></div>
+      <div class="card"><span class="tag" data-i18n="j5t">Dignidade</span><div class="n" data-i18n="j5n">Projetos sociais</div><p data-i18n="j5p">Apoio a iniciativas de combate à miséria, de saúde, educação e convivência comunitária, construídas junto com a população.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="contato" class="inv">
   <div class="in">
     <span class="kicker" data-i18n="vK">Contato</span>
@@ -368,6 +385,8 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
     cK:'Partnership with the miners', cH:'Side by side with Coomigasp', cP:'Serra Pelada was built by the work of its miners. Coomigasp, the cooperative that represents them, holds the mineral rights and is Tectônicas’ partner in the project’s new phase. Operations were structured so that cooperative members are part of the restart, not spectators.',
     c1n:'Partnership', c1p:'Integrated operation agreement with Coomigasp, which retains ownership of the mineral rights and shares in the project’s results.', c2n:'Commitment', c2p:'Respect for the miners’ history and rights, with priority for workers, suppliers and opportunities from the Serra Pelada community itself.', c3n:'Transparency', c3p:'Regular reporting to the cooperative and its members, with clear information on production, milestones and operating results.',
     sH:'A dream made possible again', sP1:'Tectônicas believed in Serra Pelada when few did. The previous project left debts, liens and a deadlock that, for years, took away the miners’ hope of seeing the project work.', sP2:'Tectônicas took on that risk. It became Coomigasp’s partner, faced the legal and regulatory barriers, and carried the licensing process through to the Operating License.', sP3:'More than restarting a mine, the goal is to restore dignity and prospects to thousands of miners and their families. The Serra Pelada dream is possible again, and now it has someone to make it real.',
+    nav4b:'Jobs & income', jK:'Jobs, income and social commitment', jH:'Wealth that stays in Serra Pelada', jP:'Social commitment is a permanent part of the Tectônicas project. Operations were designed to create jobs and income in the community itself and to bring initiatives against hunger and poverty to Serra Pelada.',
+    j1t:'Fighting hunger', j1n:'Free community restaurant', j1p:'A restaurant in Serra Pelada serving free meals to the population, to tackle hunger and food insecurity in the village.', j2t:'Local jobs', j2n:'Jobs for the community', j2p:'Priority hiring of Serra Pelada residents and miners’ families across all areas of the operation.', j3t:'Skills', j3n:'Vocational training', j3p:'Courses and training to prepare the community for modern mining roles and other professions.', j4t:'Income', j4n:'Local suppliers', j4p:'Purchasing goods and services from small local businesses, so that the income generated circulates in the Serra Pelada economy.', j5t:'Dignity', j5n:'Social projects', j5p:'Support for initiatives against poverty and for health, education and community life, built together with residents.',
     vCta:'Contact us', cred:'Cover image is illustrative, a conceptual rendering of the project.', disc:'Corporate information only. This is not a public offering of securities.'
   };
   const nodes = [...document.querySelectorAll('[data-i18n]')];
