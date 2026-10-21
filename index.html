@@ -131,8 +131,14 @@ footer img{height:34px;width:auto}
 .story{max-width:66ch;margin:0 0 44px;border-left:3px solid var(--gold);padding-left:22px}
 .story p{margin:0 0 14px;font-size:1.08rem}
 .story p:last-child{margin-bottom:0;font-weight:600}
-h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transform:uppercase;margin:0 0 8px}
+h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1.1;text-transform:uppercase;margin:0 0 8px}
 .social .card .n{font-size:1.35rem}
+.direct{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:32px;align-items:start;background:var(--gold-soft);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:28px}
+.direct p{margin:0;color:var(--fg)}
+.flow{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.flow li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.flow b{width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.2rem}
+.flow p{color:var(--muted);font-size:15px;margin-top:2px}
 </style>
 </head>
 <body>
@@ -196,6 +202,18 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
       <div class="card"><div class="n" data-i18n="c1n">Parceria</div><p data-i18n="c1p">Contrato de operação integrada com a Coomigasp, que mantém a titularidade dos direitos minerários e participa dos resultados do empreendimento.</p></div>
       <div class="card"><div class="n" data-i18n="c2n">Compromisso</div><p data-i18n="c2p">Respeito à história e aos direitos dos garimpeiros, com prioridade para mão de obra, fornecedores e oportunidades da própria comunidade de Serra Pelada.</p></div>
       <div class="card"><div class="n" data-i18n="c3n">Transparência</div><p data-i18n="c3p">Prestação de contas periódica à cooperativa e aos cooperados, com informação clara sobre produção, etapas e resultados da operação.</p></div>
+    </div>
+    <div class="direct">
+      <div>
+        <span class="kicker" data-i18n="rdK">Repasse direto</span>
+        <h3 class="sub" data-i18n="rdH">Do projeto para o cooperado, sem atravessador</h3>
+        <p data-i18n="rdP">Os valores que couberem aos garimpeiros serão repassados diretamente a cada cooperado, sem intermediários. Cada um recebe na própria conta, com comprovante individual e informação clara sobre a origem dos valores.</p>
+      </div>
+      <ol class="flow">
+        <li><b>1</b><div><strong data-i18n="rd1h">Cadastro validado</strong><p data-i18n="rd1p">Cadastro individual de cada cooperado apto, conferido junto à Coomigasp.</p></div></li>
+        <li><b>2</b><div><strong data-i18n="rd2h">Pagamento na conta do cooperado</strong><p data-i18n="rd2p">Transferência bancária ou PIX em nome do próprio garimpeiro, sem passar por terceiros.</p></div></li>
+        <li><b>3</b><div><strong data-i18n="rd3h">Comprovante e prestação de contas</strong><p data-i18n="rd3p">Comprovante individual de cada repasse e relatórios periódicos à cooperativa.</p></div></li>
+      </ol>
     </div>
   </div>
 </section>
@@ -387,6 +405,7 @@ h3.sub{font-family:var(--display);font-weight:700;font-size:1.6rem;text-transfor
     sH:'A dream made possible again', sP1:'Tectônicas believed in Serra Pelada when few did. The previous project left debts, liens and a deadlock that, for years, took away the miners’ hope of seeing the project work.', sP2:'Tectônicas took on that risk. It became Coomigasp’s partner, faced the legal and regulatory barriers, and carried the licensing process through to the Operating License.', sP3:'More than restarting a mine, the goal is to restore dignity and prospects to thousands of miners and their families. The Serra Pelada dream is possible again, and now it has someone to make it real.',
     nav4b:'Jobs & income', jK:'Jobs, income and social commitment', jH:'Wealth that stays in Serra Pelada', jP:'Social commitment is a permanent part of the Tectônicas project. Operations were designed to create jobs and income in the community itself and to bring initiatives against hunger and poverty to Serra Pelada.',
     j1t:'Fighting hunger', j1n:'Free community restaurant', j1p:'A restaurant in Serra Pelada serving free meals to the population, to tackle hunger and food insecurity in the village.', j2t:'Local jobs', j2n:'Jobs for the community', j2p:'Priority hiring of Serra Pelada residents and miners’ families across all areas of the operation.', j3t:'Skills', j3n:'Vocational training', j3p:'Courses and training to prepare the community for modern mining roles and other professions.', j4t:'Income', j4n:'Local suppliers', j4p:'Purchasing goods and services from small local businesses, so that the income generated circulates in the Serra Pelada economy.', j5t:'Dignity', j5n:'Social projects', j5p:'Support for initiatives against poverty and for health, education and community life, built together with residents.',
+    rdK:'Direct payments', rdH:'From the project to each member, with no middlemen', rdP:'Amounts due to the miners will be paid directly to each cooperative member, with no intermediaries. Each member is paid into their own account, with an individual receipt and clear information on where the money comes from.', rd1h:'Verified registry', rd1p:'Individual registration of each eligible member, checked with Coomigasp.', rd2h:'Payment to the member’s account', rd2p:'Bank transfer or PIX in the miner’s own name, without going through third parties.', rd3h:'Receipts and reporting', rd3p:'An individual receipt for each payment and regular reports to the cooperative.',
     vCta:'Contact us', cred:'Cover image is illustrative, a conceptual rendering of the project.', disc:'Corporate information only. This is not a public offering of securities.'
   };
   const nodes = [...document.querySelectorAll('[data-i18n]')];
