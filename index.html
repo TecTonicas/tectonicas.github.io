@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tectônicas Mineração · Serra Pelada</title>
+<meta name="description" content="Tectônicas Mineração: operadora autorizada do projeto de aproveitamento de ouro em Serra Pelada (Curionópolis, Pará), com Licença de Operação SEMAS vigente até 2030.">
+<meta property="og:title" content="Tectônicas Mineração · Serra Pelada">
+<meta property="og:description" content="Operadora autorizada pela ANM e licenciada pela SEMAS/PA para o aproveitamento de ouro em Serra Pelada.">
+<meta property="og:image" content="hero.jpg">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+/* Layout: navegação fixa; hero escuro sobre o satélite da área licenciada; narrativa em blocos (autorização → licenciamento → área → operação → compromisso → investidores) */
+:root{
+  --navy:#0b3f8c; --navy-deep:#061f45; --gold:#c08a22; --gold-soft:#f4ead6; --green:#3d7a24;
+  --bg:#f7f6f2; --panel:#ffffff; --fg:#14181f; --muted:#5b6170; --line:#e1ddd3;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif; --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0c1118; --panel:#131a24; --fg:#e9ecf1; --muted:#9aa3b2; --line:#253041; --gold-soft:#2b2214; --navy:#6f9ce6; color-scheme:dark;}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:inherit}
+img{max-width:100%;display:block}
+.in{max-width:72rem;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(6,31,69,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff}
+header.nav .in{display:flex;align-items:center;gap:20px;height:64px}
+header.nav .brand img{height:40px;width:auto}
+header.nav nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+header.nav nav a{text-decoration:none;opacity:.85}
+header.nav nav a:hover{opacity:1;color:#f2c76b}
+.lang{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;font-size:13px;font-weight:600}
+.lang button{font:inherit;background:none;border:0;color:#fff;padding:4px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--navy-deep)}
+@media (max-width:860px){header.nav nav{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;color:#fff;background:var(--navy-deep) url(hero.jpg) center/cover no-repeat;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,31,69,.96) 0%,rgba(6,31,69,.85) 45%,rgba(6,31,69,.45) 100%);z-index:-1}
+.hero .in{padding-block:96px 72px;display:grid;gap:28px}
+.eyebrow{font-family:var(--display);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:15px;color:#f2c76b}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,6vw,4.6rem);line-height:.98;margin:0;max-width:16ch;text-wrap:balance;text-transform:uppercase;letter-spacing:.01em}
+.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:56ch;margin:0;color:#dfe6f2}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;padding:12px 20px;border-radius:4px;font-size:15px}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.gold:hover{background:#a8781b}
+.btn.ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18);margin-top:20px}
+.facts div{background:rgba(6,31,69,.75);padding:16px 18px}
+.facts b{display:block;font-family:var(--display);font-size:1.6rem;line-height:1.1;color:#fff;font-weight:600}
+.facts span{font-size:13px;color:#c9d3e6}
+
+/* sections */
+section{padding-block:80px}
+section.alt{background:var(--panel);border-block:1px solid var(--line)}
+.kicker{font-family:var(--display);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--gold)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1.02;margin:6px 0 16px;text-transform:uppercase;text-wrap:balance}
+h3{font-size:1.1rem;margin:0 0 6px;font-weight:600}
+.intro{max-width:62ch;color:var(--muted);margin:0 0 36px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:40px;align-items:start}
+
+/* licensing path */
+.path{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.path li{display:grid;grid-template-columns:56px 1fr;gap:18px;position:relative;padding-bottom:28px}
+.path li::before{content:"";position:absolute;left:27px;top:44px;bottom:0;width:2px;background:var(--line)}
+.path li:last-child::before{display:none}
+.path .dot{width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:1.3rem}
+.path .dot svg{width:26px;height:26px}
+.path .when{font-family:var(--display);font-weight:600;letter-spacing:.06em;color:var(--gold);font-size:15px}
+.path p{margin:2px 0 0;color:var(--muted);font-size:15.5px}
+.path a{color:var(--navy);font-size:14px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:600;font-size:14px;padding:6px 12px;border-radius:999px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:22px}
+section.alt .card{background:var(--bg)}
+.card .n{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--navy);line-height:1.1;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+
+/* legacy numbers */
+.legacy{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:24px;margin-top:8px}
+.legacy b{display:block;font-family:var(--display);font-weight:700;font-size:3.2rem;line-height:1;color:var(--gold)}
+.legacy span{color:var(--muted);font-size:15px}
+.src{font-size:13px;color:var(--muted);margin-top:18px}
+
+/* map */
+figure{margin:0}
+figure img{border-radius:6px;border:1px solid var(--line);width:100%;height:auto}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0;font-size:15.5px}
+dl.spec dt{color:var(--muted)}
+dl.spec dd{margin:0;font-weight:500}
+
+/* structures */
+.infra{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:12px}
+.infra li{display:flex;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-weight:500}
+.infra li i{font-style:normal;font-family:var(--display);font-weight:700;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex:none}
+
+/* investors */
+.inv{background:var(--navy-deep);color:#fff}
+.inv h2{color:#fff}
+.inv .intro{color:#c9d3e6}
+.inv .cards .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15)}
+.inv .card p{color:#c9d3e6}
+.inv .card .n{color:#f2c76b}
+.contact{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+footer{padding-block:32px;font-size:13px;color:var(--muted)}
+footer .in{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer img{height:34px;width:auto}
+@media (prefers-reduced-motion:no-preference){.hero h1,.hero p.lead,.facts{animation:up .7s ease both}.hero p.lead{animation-delay:.1s}.facts{animation-delay:.2s}@keyframes up{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="in">
+    <a class="brand" href="#topo" aria-label="Tectônicas Mineração"><img src="logo-claro.png" alt="Tectônicas Mineração"></a>
+    <nav aria-label="Seções">
+      <a href="#autorizacao" data-i18n="nav1">Autorização</a>
+      <a href="#licenciamento" data-i18n="nav2">Licenciamento</a>
+      <a href="#area" data-i18n="nav3">Área</a>
+      <a href="#operacao" data-i18n="nav4">Operação</a>
+      <a href="#investidores" data-i18n="nav5">Investidores</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="pt" aria-pressed="true">PT</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+  </div>
+</header>
+
+<div class="hero" id="topo">
+  <div class="in">
+    <span class="eyebrow" data-i18n="heroEy">Serra Pelada · Curionópolis, Pará, Brasil</span>
+    <h1 data-i18n="heroH">A operadora licenciada de Serra Pelada</h1>
+    <p class="lead" data-i18n="heroP">A Tectônicas Mineração é a empresa autorizada pela Agência Nacional de Mineração a operar os títulos minerários de Serra Pelada e detém a Licença de Operação da SEMAS/PA para o aproveitamento de ouro nos rejeitos e estéreis da área.</p>
+    <div class="cta"><a class="btn gold" href="#investidores" data-i18n="cta1">Falar com a empresa</a><a class="btn ghost" href="#licenciamento" data-i18n="cta2">Ver etapas cumpridas</a></div>
+    <div class="facts">
+      <div><b>LO 16496/2026</b><span data-i18n="f1">Licença de Operação SEMAS/PA, válida até 15/10/2030</span></div>
+      <div><b data-i18n="f2b">3 títulos ANM</b><span data-i18n="f2">850.424/1990 · 850.425/1990 · 851.087/2014</span></div>
+      <div><b data-i18n="f3b">Operadora anotada</b><span data-i18n="f3">ANM, Relação nº 163/2026 (DOU de 05/05/2026)</span></div>
+      <div><b data-i18n="f4b">Porte D-III</b><span data-i18n="f4">Aproveitamento de rejeito e estéreis para ouro</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section id="autorizacao">
+  <div class="in split">
+    <div>
+      <span class="kicker" data-i18n="aK">Quem pode operar</span>
+      <h2 data-i18n="aH">A Tectônicas é a operadora reconhecida do projeto</h2>
+      <p class="intro" style="margin-bottom:20px" data-i18n="aP">Os direitos minerários de Serra Pelada pertencem à Coomigasp (cooperativa dos garimpeiros) e à SPCDM. Por contrato de operação integrada, reconhecido em decisão judicial e anotado pela ANM, a Tectônicas é a empresa autorizada a operar o empreendimento nos três títulos, sem alteração da titularidade.</p>
+      <span class="badge"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="aBadge">Publicado no Diário Oficial da União</span></span>
+    </div>
+    <div class="cards" style="grid-template-columns:1fr">
+      <div class="card"><span class="tag" data-i18n="t1tag">Concessão de Lavra</span><div class="n">ANM 850.425/1990</div><p data-i18n="t1">Titular: Serra Pelada Companhia de Desenvolvimento Mineral (SPCDM). Operadora anotada: Tectônicas.</p></div>
+      <div class="card"><span class="tag" data-i18n="t2tag">Lavra Garimpeira</span><div class="n">ANM 850.424/1990</div><p data-i18n="t2">Titular: Coomigasp. Operadora anotada: Tectônicas.</p></div>
+      <div class="card"><span class="tag" data-i18n="t2tag">Lavra Garimpeira</span><div class="n">ANM 851.087/2014</div><p data-i18n="t3">Titular: Coomigasp. Operadora anotada: Tectônicas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="licenciamento" class="alt">
+  <div class="in split">
+    <div>
+      <span class="kicker" data-i18n="lK">Etapas cumpridas</span>
+      <h2 data-i18n="lH">Licenciamento concluído</h2>
+      <p class="intro" data-i18n="lP">Em 2026 a Tectônicas percorreu as etapas jurídicas, regulatórias e ambientais necessárias para operar. A Licença de Operação foi concedida pela SEMAS/PA após análise técnica do Núcleo Regional de Marabá.</p>
+      <figure><img src="mapa-lo.jpg" alt="Mapa oficial anexo à Licença de Operação 16496/2026 com as poligonais da ANM, a área de aproveitamento e a infraestrutura de apoio" loading="lazy"><figcaption data-i18n="mapCap">Mapa oficial anexo à LO 16496/2026 (SEMAS/PA): poligonais ANM em preto, área de aproveitamento em vermelho e infraestrutura de apoio em azul.</figcaption></figure>
+    </div>
+    <ol class="path">
+      <li><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="when" data-i18n="s1w">Contrato</span><h3 data-i18n="s1h">Operação integrada com os titulares</h3><p data-i18n="s1p">Contrato com a Coomigasp e a SPCDM para a Tectônicas operar o empreendimento, assumindo débitos e bloqueios deixados pelo projeto anterior.</p></div></li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="when" data-i18n="s2w">Decisão judicial</span><h3 data-i18n="s2h">Reconhecimento da operadora</h3><p data-i18n="s2p">Processo nº 0000149-49.2020.5.08.0130, que fundamenta a anotação na ANM e a licença ambiental.</p></div></li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="when">05/05/2026</span><h3 data-i18n="s3h">Anotação na ANM</h3><p data-i18n="s3p">Relação nº 163/2026, publicada no DOU: a Tectônicas está autorizada a atuar como operadora nos três títulos.</p><a href="https://www.in.gov.br/web/dou/-/despacho-703197506" target="_blank" rel="noopener" data-i18n="s3a">Ver publicação no DOU</a></div></li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="when">02/06/2026</span><h3 data-i18n="s4h">Pedido de Licença de Operação</h3><p data-i18n="s4p">Protocolo na SEMAS/PA, processo nº 2026/0000020732, com Plano de Controle Ambiental.</p></div></li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="when">15/10/2026</span><h3 data-i18n="s5h">Parecer técnico favorável</h3><p data-i18n="s5p">Parecer Técnico nº 70133/NURE-MAR/DINURE/2026 e Laudo Técnico nº 20611/2026 atestando a área.</p></div></li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="when">16/10/2026</span><h3 data-i18n="s6h">Licença de Operação concedida</h3><p data-i18n="s6p">LO nº 16496/2026, válida até 15/10/2030, para o aproveitamento mineral de ouro nos três polígonos.</p><a href="https://titulo.page.link/tpkY" target="_blank" rel="noopener" data-i18n="s6a">Conferir autenticidade na SEMAS</a></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="area">
+  <div class="in">
+    <span class="kicker" data-i18n="rK">O legado de Serra Pelada</span>
+    <h2 data-i18n="rH">Um dos maiores garimpos de ouro da história</h2>
+    <p class="intro" data-i18n="rP">Nos anos 1980, Serra Pelada foi o maior garimpo a céu aberto do período. A atividade manual deixou grandes volumes de rejeito e estéril na área, material que hoje é o foco do aproveitamento licenciado da Tectônicas, com recuperação ambiental das áreas alteradas.</p>
+    <div class="legacy">
+      <div><b>42 t+</b><span data-i18n="g1">de ouro extraídas em uma década, segundo registros oficiais</span></div>
+      <div><b>14 t</b><span data-i18n="g2">retiradas só em 1983, auge do garimpo</span></div>
+      <div><b data-i18n="g3b">100 mil+</b><span data-i18n="g3">garimpeiros no auge da atividade</span></div>
+    </div>
+    <p class="src" data-i18n="gSrc">Fonte: IBRAM, Instituto Brasileiro de Mineração.</p>
+    <div class="split" style="margin-top:48px">
+      <dl class="spec">
+        <dt data-i18n="d1">Município</dt><dd>Curionópolis, Pará</dd>
+        <dt data-i18n="d2">Região</dt><dd data-i18n="d2v">Sudeste do Pará, Província Mineral de Carajás</dd>
+        <dt data-i18n="d3">Coordenadas</dt><dd>5°56′25″ S · 49°40′25″ W (SIRGAS 2000)</dd>
+        <dt data-i18n="d4">Substância</dt><dd data-i18n="d4v">Ouro</dd>
+        <dt data-i18n="d5">Tipologia</dt><dd data-i18n="d5v">Aproveitamento de rejeito e estéreis na área de concessão de lavra</dd>
+        <dt data-i18n="d6">Licença</dt><dd data-i18n="d6v">LO SEMAS/PA nº 16496/2026, até 15/10/2030</dd>
+      </dl>
+      <p style="margin:0;color:var(--muted)" data-i18n="aP2">O empreendimento ocupa a área histórica de Serra Pelada, com acesso viário e infraestrutura de apoio já delimitados na licença. A operação aproveita material já movimentado no passado, o que reduz a necessidade de novas frentes de lavra e combina produção com recuperação da área.</p>
+    </div>
+  </div>
+</section>
+
+<section id="operacao" class="alt">
+  <div class="in">
+    <span class="kicker" data-i18n="oK">Operação</span>
+    <h2 data-i18n="oH">Estrutura autorizada na licença</h2>
+    <p class="intro" data-i18n="oP">A Licença de Operação delimita a área de aproveitamento e as estruturas de apoio do empreendimento.</p>
+    <ol class="infra">
+      <li><i>1</i><span data-i18n="i1">Portaria</span></li>
+      <li><i>2</i><span data-i18n="i2">Área administrativa</span></li>
+      <li><i>3</i><span data-i18n="i3">Laboratório de recuperação de lixiviação</span></li>
+      <li><i>4</i><span data-i18n="i4">Laboratório</span></li>
+      <li><i>5</i><span data-i18n="i5">Pilhas de lixiviação</span></li>
+      <li><i>6</i><span data-i18n="i6">Concentrado gravítico de ouro</span></li>
+      <li><i>7</i><span data-i18n="i7">Beneficiamento gravítico</span></li>
+      <li><i>8</i><span data-i18n="i8">Pilhas de alimentação do beneficiamento</span></li>
+    </ol>
+    <div style="margin-top:56px">
+      <span class="kicker" data-i18n="eK">Compromisso socioambiental</span>
+      <h2 data-i18n="eH">Programas previstos no licenciamento</h2>
+      <div class="cards">
+        <div class="card"><h3 data-i18n="e1h">Recuperação de áreas</h3><p data-i18n="e1p">Plano de Recuperação de Áreas Degradadas executado junto com a operação.</p></div>
+        <div class="card"><h3 data-i18n="e2h">Recursos hídricos</h3><p data-i18n="e2p">Gestão da água, drenagem e controle de erosão e sedimentos.</p></div>
+        <div class="card"><h3 data-i18n="e3h">Estabilidade das pilhas</h3><p data-i18n="e3p">Monitoramento contínuo das pilhas de estéril e de beneficiamento.</p></div>
+        <div class="card"><h3 data-i18n="e4h">Comunidade local</h3><p data-i18n="e4p">Capacitação e contratação de mão de obra local, fornecedores da região e comunicação social com Serra Pelada.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="investidores" class="inv">
+  <div class="in">
+    <span class="kicker" data-i18n="vK">Investidores</span>
+    <h2 data-i18n="vH">Projeto licenciado, pronto para escalar</h2>
+    <p class="intro" data-i18n="vP">A Tectônicas busca parceiros e investidores para a fase de operação em Serra Pelada. O material técnico completo está disponível para investidores qualificados, mediante acordo de confidencialidade.</p>
+    <div class="cards">
+      <div class="card"><div class="n" data-i18n="v1n">Segurança jurídica</div><p data-i18n="v1p">Operadora anotada pela ANM com base em decisão judicial e contrato com os titulares.</p></div>
+      <div class="card"><div class="n" data-i18n="v2n">Licença vigente</div><p data-i18n="v2p">Licença de Operação SEMAS/PA válida até outubro de 2030.</p></div>
+      <div class="card"><div class="n" data-i18n="v3n">Material já lavrado</div><p data-i18n="v3p">Aproveitamento de rejeitos e estéreis históricos de um dos depósitos de ouro mais conhecidos do Brasil.</p></div>
+      <div class="card"><div class="n" data-i18n="v4n">Data room</div><p data-i18n="v4p">Laudos, licença, volumes, teores e cronograma de produção sob NDA.</p></div>
+    </div>
+    <div class="contact"><a class="btn gold" href="mailto:CONTATO@EMPRESA.COM.BR" data-i18n="vCta">Solicitar apresentação</a><span style="color:#c9d3e6;font-size:15px">CONTATO@EMPRESA.COM.BR</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="in">
+    <img src="logo.png" alt="Tectônicas Mineração">
+    <span>Tectônicas Mineração Ltda · CNPJ 06.296.486/0001-33 · Serra Pelada, Curionópolis/PA</span>
+    <span data-i18n="disc">Conteúdo institucional. Não constitui oferta pública de valores mobiliários.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const EN = {
+    nav1:'Authorization', nav2:'Licensing', nav3:'Site', nav4:'Operations', nav5:'Investors',
+    heroEy:'Serra Pelada · Curionópolis, Pará, Brazil', heroH:'The licensed operator of Serra Pelada',
+    heroP:'Tectônicas Mineração is the company authorized by Brazil’s National Mining Agency (ANM) to operate the Serra Pelada mining titles, and it holds the Operating License from the Pará State Environmental Agency (SEMAS) for gold recovery from the site’s tailings and waste rock.',
+    cta1:'Contact the company', cta2:'See completed milestones',
+    f1:'SEMAS/PA Operating License, valid until Oct 15, 2030', f2b:'3 ANM titles', f2:'850.424/1990 · 850.425/1990 · 851.087/2014', f3b:'Registered operator', f3:'ANM List no. 163/2026 (Official Gazette, May 5, 2026)', f4b:'Size class D-III', f4:'Gold recovery from tailings and waste rock',
+    aK:'Who can operate', aH:'Tectônicas is the recognized operator of the project',
+    aP:'The Serra Pelada mineral rights belong to Coomigasp (the miners’ cooperative) and to SPCDM. Under an integrated operation agreement, upheld by a court decision and registered by ANM, Tectônicas is the company authorized to operate the project on all three titles, with no change in title ownership.',
+    aBadge:'Published in Brazil’s Federal Official Gazette', t1tag:'Mining Concession', t1:'Holder: Serra Pelada Companhia de Desenvolvimento Mineral (SPCDM). Registered operator: Tectônicas.', t2tag:'Artisanal Mining Permit', t2:'Holder: Coomigasp. Registered operator: Tectônicas.', t3:'Holder: Coomigasp. Registered operator: Tectônicas.',
+    lK:'Completed milestones', lH:'Licensing completed', lP:'In 2026 Tectônicas completed the legal, regulatory and environmental steps required to operate. The Operating License was granted by SEMAS/PA after technical review by its Marabá regional office.',
+    mapCap:'Official map attached to Operating License 16496/2026 (SEMAS/PA): ANM polygons in black, recovery area in red and support facilities in blue.',
+    s1w:'Agreement', s1h:'Integrated operation with the title holders', s1p:'Agreement with Coomigasp and SPCDM for Tectônicas to operate the project, taking on debts and liens left by the previous project.',
+    s2w:'Court decision', s2h:'Operator recognized', s2p:'Case no. 0000149-49.2020.5.08.0130, which underpins the ANM registration and the environmental license.',
+    s3h:'Registration with ANM', s3p:'List no. 163/2026, published in the Official Gazette: Tectônicas is authorized to act as operator on all three titles.', s3a:'See the Official Gazette notice',
+    s4h:'Operating License application', s4p:'Filed with SEMAS/PA, case no. 2026/0000020732, with an Environmental Control Plan.',
+    s5h:'Favorable technical opinion', s5p:'Technical Opinion no. 70133/NURE-MAR/DINURE/2026 and Technical Report no. 20611/2026 certifying the area.',
+    s6h:'Operating License granted', s6p:'License no. 16496/2026, valid until Oct 15, 2030, for gold recovery on the three polygons.', s6a:'Verify authenticity with SEMAS',
+    rK:'The Serra Pelada legacy', rH:'One of history’s largest gold rushes', rP:'In the 1980s Serra Pelada was the largest open-pit gold rush of its time. Manual mining left large volumes of tailings and waste rock on site, the material that Tectônicas is now licensed to process, together with environmental recovery of the disturbed areas.',
+    g1:'of gold recovered in a decade, according to official records', g2:'recovered in 1983 alone, the peak year', g3:'miners at the peak of activity', g3b:'100k+', gSrc:'Source: IBRAM, Brazilian Mining Institute.',
+    d1:'Municipality', d2:'Region', d2v:'Southeastern Pará, Carajás Mineral Province', d3:'Coordinates', d4:'Commodity', d4v:'Gold', d5:'Activity', d5v:'Recovery from tailings and waste rock within the mining concession area', d6:'License', d6v:'SEMAS/PA Operating License no. 16496/2026, until Oct 15, 2030',
+    aP2:'The project sits on the historic Serra Pelada site, with road access and support facilities already defined in the license. Operations process material moved in the past, which reduces the need for new mining fronts and combines production with site recovery.',
+    oK:'Operations', oH:'Facilities authorized in the license', oP:'The Operating License defines the recovery area and the project’s support facilities.',
+    i1:'Gatehouse', i2:'Administrative area', i3:'Leach recovery laboratory', i4:'Laboratory', i5:'Heap leach pads', i6:'Gravity gold concentrate', i7:'Gravity processing', i8:'Processing feed stockpiles',
+    eK:'Social and environmental commitment', eH:'Programs required by the license', e1h:'Land reclamation', e1p:'Degraded Area Recovery Plan carried out alongside operations.', e2h:'Water resources', e2p:'Water management, drainage and erosion and sediment control.', e3h:'Stockpile stability', e3p:'Ongoing monitoring of waste and processing stockpiles.', e4h:'Local community', e4p:'Training and hiring of local workers, regional suppliers and community communication in Serra Pelada.',
+    vK:'Investors', vH:'A licensed project, ready to scale', vP:'Tectônicas is seeking partners and investors for the operating phase at Serra Pelada. The full technical package is available to qualified investors under a non-disclosure agreement.',
+    v1n:'Legal certainty', v1p:'Operator registered by ANM, based on a court decision and an agreement with the title holders.', v2n:'License in force', v2p:'SEMAS/PA Operating License valid until October 2030.', v3n:'Material already mined', v3p:'Recovery of historic tailings and waste rock from one of Brazil’s best-known gold deposits.', v4n:'Data room', v4p:'Technical reports, license, volumes, grades and production schedule under NDA.',
+    vCta:'Request a presentation', disc:'Corporate information only. This is not a public offering of securities.'
+  };
+  const nodes = [...document.querySelectorAll('[data-i18n]')];
+  const PT = {}; nodes.forEach((n) => { PT[n.dataset.i18n] = n.textContent; });
+  function setLang(l){
+    const d = l === 'en' ? EN : PT;
+    nodes.forEach((n) => { const v = d[n.dataset.i18n]; if (v) n.textContent = v; });
+    document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR';
+    document.querySelectorAll('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.l === l)));
+    try { localStorage.setItem('tt-lang', l); } catch(e) {}
+  }
+  document.querySelectorAll('.lang button').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.l)));
+  let l = 'pt';
+  try { l = localStorage.getItem('tt-lang') || ((navigator.language || '').toLowerCase().startsWith('pt') ? 'pt' : 'en'); } catch(e) {}
+  if (location.hash === '#en') l = 'en';
+  if (l === 'en') setLang('en');
+})();
+</script>
+</body>
+</html>
